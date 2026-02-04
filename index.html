@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 320px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: #ccc;
+      position: relative;
+    }
+
+    #msg {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff4d6d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>💖 Will you be my Valentine? 💖</h1>
+
+    <button id="yes">Yes 😍</button>
+    <button id="no">No 🙈</button>
+
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
+    const msg = document.getElementById("msg");
+
+    yes.onclick = () => {
+      msg.innerText = "Yayyy! 💕 I knew it 😘";
+    };
+
+    no.onmouseover = () => {
+      no.style.left = Math.random() * 200 - 100 + "px";
+      no.style.top = Math.random() * 200 - 100 + "px";
+    };
+  </script>
+
+</body>
+</html>
